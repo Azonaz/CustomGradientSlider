@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GradintSliderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
