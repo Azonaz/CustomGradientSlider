@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		846F60112C9AD978003157E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F60102C9AD978003157E7 /* AppDelegate.swift */; };
-		846F60132C9AD978003157E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F60122C9AD978003157E7 /* SceneDelegate.swift */; };
-		846F60152C9AD978003157E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F60142C9AD978003157E7 /* ViewController.swift */; };
-		846F60182C9AD978003157E7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 846F60172C9AD978003157E7 /* Base */; };
+		846F60152C9AD978003157E7 /* GradintSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F60142C9AD978003157E7 /* GradintSliderViewController.swift */; };
 		846F601A2C9AD97A003157E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846F60192C9AD97A003157E7 /* Assets.xcassets */; };
 		846F601D2C9AD97A003157E7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 846F601C2C9AD97A003157E7 /* Base */; };
+		846F60252C9ADACB003157E7 /* CustomGradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F60242C9ADACB003157E7 /* CustomGradientSlider.swift */; };
+		846F60272C9AF56E003157E7 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 846F60262C9AF56E003157E7 /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		846F600D2C9AD978003157E7 /* CustomGradientSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomGradientSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846F60102C9AD978003157E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		846F60122C9AD978003157E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		846F60142C9AD978003157E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		846F60172C9AD978003157E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		846F60142C9AD978003157E7 /* GradintSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradintSliderViewController.swift; sourceTree = "<group>"; };
 		846F60192C9AD97A003157E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846F601C2C9AD97A003157E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		846F601E2C9AD97A003157E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846F60242C9ADACB003157E7 /* CustomGradientSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGradientSlider.swift; sourceTree = "<group>"; };
+		846F60262C9AF56E003157E7 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +40,7 @@
 		846F60042C9AD978003157E7 = {
 			isa = PBXGroup;
 			children = (
+				846F60262C9AF56E003157E7 /* readme.md */,
 				846F600F2C9AD978003157E7 /* CustomGradientSlider */,
 				846F600E2C9AD978003157E7 /* Products */,
 			);
@@ -57,9 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				846F60102C9AD978003157E7 /* AppDelegate.swift */,
-				846F60122C9AD978003157E7 /* SceneDelegate.swift */,
-				846F60142C9AD978003157E7 /* ViewController.swift */,
-				846F60162C9AD978003157E7 /* Main.storyboard */,
+				846F60142C9AD978003157E7 /* GradintSliderViewController.swift */,
+				846F60242C9ADACB003157E7 /* CustomGradientSlider.swift */,
 				846F60192C9AD97A003157E7 /* Assets.xcassets */,
 				846F601B2C9AD97A003157E7 /* LaunchScreen.storyboard */,
 				846F601E2C9AD97A003157E7 /* Info.plist */,
@@ -126,8 +126,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				846F601A2C9AD97A003157E7 /* Assets.xcassets in Resources */,
+				846F60272C9AF56E003157E7 /* readme.md in Resources */,
 				846F601D2C9AD97A003157E7 /* Base in Resources */,
-				846F60182C9AD978003157E7 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +138,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846F60152C9AD978003157E7 /* ViewController.swift in Sources */,
+				846F60152C9AD978003157E7 /* GradintSliderViewController.swift in Sources */,
 				846F60112C9AD978003157E7 /* AppDelegate.swift in Sources */,
-				846F60132C9AD978003157E7 /* SceneDelegate.swift in Sources */,
+				846F60252C9ADACB003157E7 /* CustomGradientSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		846F60162C9AD978003157E7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				846F60172C9AD978003157E7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		846F601B2C9AD97A003157E7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,9 +289,8 @@
 				INFOPLIST_FILE = CustomGradientSlider/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +298,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.azonaz.CustomGradientSlider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -325,9 +320,8 @@
 				INFOPLIST_FILE = CustomGradientSlider/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +329,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.azonaz.CustomGradientSlider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
