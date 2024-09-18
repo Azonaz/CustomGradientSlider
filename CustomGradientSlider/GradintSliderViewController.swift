@@ -1,6 +1,6 @@
 import UIKit
 
-class SliderViewController: UIViewController {
+final class SliderViewController: UIViewController {
     
     private lazy var calculateLabel: UILabel = {
         let label = createLabel(text: "Let's calculate smth: 150 km", textColor: .black)

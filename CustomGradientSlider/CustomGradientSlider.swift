@@ -9,19 +9,19 @@ final class CustomGradientSlider: UIControl {
     
     var minimumValue: CGFloat = .zero {
         didSet {
-            updateGradientSliderLayerFrames()
+            layoutSliderLayers()
         }
     }
     
     var maximumValue: CGFloat = 1 {
         didSet {
-            updateGradientSliderLayerFrames()
+            layoutSliderLayers()
         }
     }
     
     var value: CGFloat = .zero {
         didSet {
-            updateGradientSliderLayerFrames()
+            layoutSliderLayers()
         }
     }
     
@@ -33,7 +33,7 @@ final class CustomGradientSlider: UIControl {
     
     var height: CGFloat = 30 {
         didSet {
-            updateGradientSliderLayerFrames()
+            layoutSliderLayers()
         }
     }
     
@@ -50,7 +50,7 @@ final class CustomGradientSlider: UIControl {
     
     override var frame: CGRect {
         didSet {
-            updateGradientSliderLayerFrames()
+            layoutSliderLayers()
         }
     }
     
@@ -63,8 +63,13 @@ final class CustomGradientSlider: UIControl {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layoutSliderLayers()
+    }
+    
     private func setupGradientSlider() {
-        trackLayer.rangeSlider = self
+        trackLayer.linkedSlider = self
         trackLayer.contentsScale = UIScreen.main.scale
         layer.addSublayer(trackLayer)
         sliderGradientLayer.startPoint = CGPoint(x: 0, y: 0)
@@ -73,7 +78,7 @@ final class CustomGradientSlider: UIControl {
         trackLayer.addSublayer(sliderGradientLayer)
     }
     
-    private func updateGradientSliderLayerFrames() {
+    private func layoutSliderLayers() {
         CATransaction.begin()
         CATransaction.setDisableActions(true)
         trackLayer.frame = CGRect(x: .zero, y: bounds.midY - (height / 2), width: bounds.width, height: height)
@@ -86,13 +91,8 @@ final class CustomGradientSlider: UIControl {
         CATransaction.commit()
     }
     
-    func positionForSliderValue(_ value: CGFloat) -> CGFloat {
+    private func positionForSliderValue(_ value: CGFloat) -> CGFloat {
         bounds.width * (value / maximumValue)
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        updateGradientSliderLayerFrames()
     }
 }
 
@@ -124,10 +124,10 @@ extension CustomGradientSlider {
 }
 
 class CustomSliderTrackLayer: CALayer {
-    weak var rangeSlider: CustomGradientSlider?
+    weak var linkedSlider: CustomGradientSlider?
     
     override func draw(in ctx: CGContext) {
-        guard let slider = rangeSlider else { return }
+        guard let slider = linkedSlider else { return }
         let path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
         ctx.addPath(path.cgPath)
         ctx.setFillColor(slider.trackTintColor.cgColor)
